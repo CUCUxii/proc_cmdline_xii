@@ -29,7 +29,7 @@ def fuzzing(x,y):
 				filtro = re.split('/cmdline/',content)[3].replace(caca, '')
 				if filtro not in repeticiones:
 					repeticiones.append(filtro)
-					print(f"  >  {i} -> {filtro}")
+					print(f"  >  {i} -> /{filtro}")
 				else:
 					pass
 		except IndexError:
